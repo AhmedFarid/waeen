@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shutterstock-282366986" translatesAutoresizingMaskIntoConstraints="NO" id="NB0-ft-O58">
+                                <rect key="frame" x="16" y="330" width="343" height="329"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="NB0-ft-O58" secondAttribute="height" multiplier="49:47" id="HTk-nH-7Ob"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image 10" translatesAutoresizingMaskIntoConstraints="NO" id="2pr-Cv-Obo">
+                                <rect key="frame" x="63" y="184" width="249" height="138"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="NB0-ft-O58" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="1Mk-92-QOg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="NB0-ft-O58" secondAttribute="bottom" constant="8" id="52h-uc-qMo"/>
+                            <constraint firstItem="NB0-ft-O58" firstAttribute="top" secondItem="2pr-Cv-Obo" secondAttribute="bottom" constant="8" id="JWW-jZ-Ecc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NB0-ft-O58" secondAttribute="trailing" constant="16" id="Rne-Mu-aEs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2pr-Cv-Obo" secondAttribute="trailing" constant="63" id="ZnM-bw-DZL"/>
+                            <constraint firstItem="2pr-Cv-Obo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="63" id="yGM-Lw-Hmt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="52" y="374.66266866566718"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Image 10" width="249" height="138"/>
+        <image name="shutterstock-282366986" width="264" height="264"/>
+    </resources>
+</document>
