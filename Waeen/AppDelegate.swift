@@ -5,8 +5,24 @@
 //  Created by farid on 3/6/19.
 //  Copyright © 2019 farid. All rights reserved.
 //
+//
+//if getAPIToken().user_token == nil {
+//    let sb = UIStoryboard(name: "Main", bundle: nil)
+//    vc = sb.instantiateInitialViewController()!
+//}else if getAPIToken().role == "admin" {
+//    let sb = UIStoryboard(name: "Admin", bundle: nil)
+//    vc = sb.instantiateInitialViewController()!
+//}else if getAPIToken().role == "parent" {
+//    let sb = UIStoryboard(name: "family", bundle: nil)
+//    vc = sb.instantiateInitialViewController()!
+//}else {
+//    let sb = UIStoryboard(name: "famliymember", bundle: nil)
+//    vc = sb.instantiateInitialViewController()!
+//}
 
 import UIKit
+import IQKeyboardManagerSwift
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +32,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        IQKeyboardManager.shared.enable = true
+        
+        if let user_token = helper.getAPIToken().user_token{
+            if helper.getAPIToken().role == "admin" {
+            print("user_token\(user_token)")
+            let tab = UIStoryboard(name: "Admin", bundle: nil).instantiateInitialViewController()!
+            window?.rootViewController = tab
+            }else if helper.getAPIToken().role == "parent" {
+                print("user_token\(user_token)")
+                let tab = UIStoryboard(name: "family", bundle: nil).instantiateInitialViewController()!
+                window?.rootViewController = tab
+            }else {
+                print("user_token\(user_token)")
+                let tab = UIStoryboard(name: "famliymember", bundle: nil).instantiateInitialViewController()!
+                window?.rootViewController = tab
+            }
+        }
+        
         return true
     }
 

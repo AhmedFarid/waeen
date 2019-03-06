@@ -7,3 +7,10 @@
 //
 
 import Foundation
+
+struct URLs {
+    
+    static let main = "http://www.waeen.net/api/"
+    static let login = main + "login"
+    
+}
