@@ -12,4 +12,7 @@ target 'Waeen' do
   pod 'SwiftyJSON'
   pod 'Kingfisher'
   pod 'IQKeyboardManagerSwift'
+  pod 'Firebase/Core'
+  pod 'Firebase/Database'
+  pod 'Firebase/Auth'
 end

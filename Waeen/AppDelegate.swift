@@ -6,21 +6,10 @@
 //  Copyright © 2019 farid. All rights reserved.
 //
 //
-//if getAPIToken().user_token == nil {
-//    let sb = UIStoryboard(name: "Main", bundle: nil)
-//    vc = sb.instantiateInitialViewController()!
-//}else if getAPIToken().role == "admin" {
-//    let sb = UIStoryboard(name: "Admin", bundle: nil)
-//    vc = sb.instantiateInitialViewController()!
-//}else if getAPIToken().role == "parent" {
-//    let sb = UIStoryboard(name: "family", bundle: nil)
-//    vc = sb.instantiateInitialViewController()!
-//}else {
-//    let sb = UIStoryboard(name: "famliymember", bundle: nil)
-//    vc = sb.instantiateInitialViewController()!
-//}
+
 
 import UIKit
+import Firebase
 import IQKeyboardManagerSwift
 
 
@@ -32,6 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        FirebaseApp.configure()
         IQKeyboardManager.shared.enable = true
         
         if let user_token = helper.getAPIToken().user_token{
@@ -49,7 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 window?.rootViewController = tab
             }
         }
-        
+        //FirebaseApp.configure()
         return true
     }
 

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>108291614678-m5j1fg2hn91irfel22ueiiuoorilasim.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.108291614678-m5j1fg2hn91irfel22ueiiuoorilasim</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDQFNcu-BiIk-nY8SO2nr6983MGtHg1QhU</string>
+	<key>GCM_SENDER_ID</key>
+	<string>108291614678</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>Ebakers.Waeen</string>
+	<key>PROJECT_ID</key>
+	<string>wean-f01f2</string>
+	<key>STORAGE_BUCKET</key>
+	<string>wean-f01f2.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:108291614678:ios:c52fa7853e820e63</string>
+	<key>DATABASE_URL</key>
+	<string>https://wean-f01f2.firebaseio.com</string>
+</dict>
+</plist>

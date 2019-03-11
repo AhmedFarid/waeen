@@ -12,6 +12,12 @@ import UIKit
 @IBDesignable
 class homeCell: UICollectionViewCell {
     
+    
+    
+    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var stutes: UILabel!
+    @IBOutlet weak var speed: UILabel!
+    
     @IBInspectable var cornerRadius: CGFloat = 0{
         didSet{
             self.layer.cornerRadius = cornerRadius

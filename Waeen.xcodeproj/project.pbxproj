@@ -24,6 +24,8 @@
 		758DF008222FF2AA0044CF2A /* showAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758DF007222FF2AA0044CF2A /* showAlert.swift */; };
 		758DF00B223006EC0044CF2A /* homeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758DF00A223006EC0044CF2A /* homeCell.swift */; };
 		758DF00F223007C80044CF2A /* adminHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758DF00E223007C80044CF2A /* adminHomeVC.swift */; };
+		758DF011223012020044CF2A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 758DF010223012020044CF2A /* GoogleService-Info.plist */; };
+		758DF014223019670044CF2A /* DataServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758DF013223019670044CF2A /* DataServices.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,8 @@
 		758DF007222FF2AA0044CF2A /* showAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = showAlert.swift; sourceTree = "<group>"; };
 		758DF00A223006EC0044CF2A /* homeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeCell.swift; sourceTree = "<group>"; };
 		758DF00E223007C80044CF2A /* adminHomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = adminHomeVC.swift; sourceTree = "<group>"; };
+		758DF010223012020044CF2A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		758DF013223019670044CF2A /* DataServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataServices.swift; sourceTree = "<group>"; };
 		7A250EFA201FC002BA05152C /* Pods-Waeen.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Waeen.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Waeen/Pods-Waeen.debug.xcconfig"; sourceTree = "<group>"; };
 		BF5A9FB43BE0B8810F1B8741 /* Pods_Waeen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Waeen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -84,8 +88,10 @@
 			isa = PBXGroup;
 			children = (
 				758DEFDC222FC8F80044CF2A /* AppDelegate.swift */,
+				758DF010223012020044CF2A /* GoogleService-Info.plist */,
 				758DEFE8222FC8FA0044CF2A /* Info.plist */,
 				758DEFE3222FC8FA0044CF2A /* Assets.xcassets */,
+				758DF012223017CC0044CF2A /* Services */,
 				758DEFF4222FCC060044CF2A /* View */,
 				758DEFF3222FCBF90044CF2A /* Controller */,
 				758DEFF2222FCBEA0044CF2A /* API */,
@@ -200,6 +206,14 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		758DF012223017CC0044CF2A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				758DF013223019670044CF2A /* DataServices.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		88B53DE9C7E8C1B685B7933F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -283,6 +297,7 @@
 				758DEFFE222FD6330044CF2A /* famliymember.storyboard in Resources */,
 				758DEFE4222FC8FA0044CF2A /* Assets.xcassets in Resources */,
 				758DEFE2222FC8F80044CF2A /* Main.storyboard in Resources */,
+				758DF011223012020044CF2A /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,16 +330,24 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Waeen/Pods-Waeen-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -343,6 +366,7 @@
 				758DF006222FEFDD0044CF2A /* API+AUTH.swift in Sources */,
 				758DF00F223007C80044CF2A /* adminHomeVC.swift in Sources */,
 				758DF008222FF2AA0044CF2A /* showAlert.swift in Sources */,
+				758DF014223019670044CF2A /* DataServices.swift in Sources */,
 				758DF002222FD9E40044CF2A /* Config.swift in Sources */,
 				758DF004222FE24D0044CF2A /* helper.swift in Sources */,
 				758DF00B223006EC0044CF2A /* homeCell.swift in Sources */,
