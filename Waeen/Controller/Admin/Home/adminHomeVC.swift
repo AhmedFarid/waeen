@@ -8,12 +8,34 @@
 
 import UIKit
 import Firebase
+import MapKit
+
+final class vendoAnnoutation: NSObject, MKAnnotation {
+    var coordinate: CLLocationCoordinate2D
+    var title: String?
+    var subtitle: String?
+    
+    
+    init(coordinate: CLLocationCoordinate2D, title: String?, subtitle: String) {
+        self.coordinate = coordinate
+        self.title = title
+        self.subtitle = subtitle
+        
+        super.init()
+    }
+    
+    var region: MKCoordinateRegion {
+        let span = MKCoordinateSpan(latitudeDelta: 0.04, longitudeDelta: 0.04)
+        return MKCoordinateRegion(center: coordinate, span: span)
+    }
+}
 
 class adminHomeVC: UIViewController {
     
     
     
     @IBOutlet weak var collection: UICollectionView!
+    @IBOutlet weak var mapp: MKMapView!
     
     let ref = Database.database().reference().child(helper.getAPIToken().user_token ?? "")
     var buss = [DataSnapshot]()
@@ -21,9 +43,17 @@ class adminHomeVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        
         collection.delegate = self
         collection.dataSource = self
         getbus()
+        
+        
+    }
+    
+    func busInmap(){
+        
     }
     
     func getbus() {
@@ -79,6 +109,14 @@ extension adminHomeVC: UICollectionViewDelegate, UICollectionViewDataSource ,UIC
             print(lat)
             print(lng)
             print(supervisorName)
+            
+            mapp.register(MKMarkerAnnotationView.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
+            
+            let mitCoordinate = CLLocationCoordinate2D(latitude: Double(lat) ?? 0.0, longitude: Double(lng) ?? 0.0)
+            
+            let mitAnnotation = vendoAnnoutation(coordinate: mitCoordinate, title: "\(busName)\n\(busNumber)", subtitle: "\(speed)\n\(supervisorName)")
+            mapp.addAnnotation(mitAnnotation)
+            mapp.setRegion(mitAnnotation.region, animated: true)
         }
     }
 
@@ -87,6 +125,20 @@ extension adminHomeVC: UICollectionViewDelegate, UICollectionViewDataSource ,UIC
         return CGSize(width: 120, height: collectionView.frame.height)
     }
 }
+
+extension adminHomeVC: MKMapViewDelegate {
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        if let vendoAnnoutationView    = mapp.dequeueReusableAnnotationView(withIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier) as? MKMarkerAnnotationView {
+            vendoAnnoutationView.animatesWhenAdded = true
+            vendoAnnoutationView.titleVisibility = .adaptive
+            vendoAnnoutationView.titleVisibility = .adaptive
+            
+            return vendoAnnoutationView
+        }
+        return nil
+    }
+}
+
 
 
 

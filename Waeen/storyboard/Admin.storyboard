@@ -117,6 +117,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="collection" destination="TI4-E8-Lct" id="Aoo-R0-3d0"/>
+                        <outlet property="mapp" destination="B0z-9g-PQc" id="yaj-lV-sHt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="og4-fx-ufn" userLabel="First Responder" sceneMemberID="firstResponder"/>
