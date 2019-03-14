@@ -53,20 +53,10 @@ class adminHomeVC: UIViewController {
     }
     
     func busInmap(){
-        
     }
     
     func getbus() {
         print(ref)
-//        ref.observe(.childAdded) { (snapshot: DataSnapshot) in
-//            self.buss.append(snapshot)
-//            print("xxx\(self.buss)")
-//            self.collection.performBatchUpdates({ () -> Void in
-//                let ip = NSIndexPath(row: self.buss.count-1, section: 0)
-//                self.collection.insertItems(at: [ip as IndexPath])
-//            }, completion:nil)
-//        }
-//
         ref.observe(.value) { (snapshot: DataSnapshot) in
             self.buss = []
             
@@ -75,9 +65,25 @@ class adminHomeVC: UIViewController {
             }
             
             self.collection.reloadData()
+            if let data = snapshot.value as? [String:AnyObject]{
+                for value in data.values {
+                     if let busName = value["busName"] as? String,let speed = value["speed"] as? Int,let busNumber = value["busNumber"] as? String,let lat = value["lat"] as? String, let lng = value["lng"] as? String,let supervisorName = value["supervisorName"] as? String {
+                        self.mapp.register(MKMarkerAnnotationView.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
+                        
+                        let mitCoordinate = CLLocationCoordinate2D(latitude: Double(lat) ?? 0.0, longitude: Double(lng) ?? 0.0)
+
+                        let mitAnnotation = vendoAnnoutation(coordinate: mitCoordinate, title: "\(busName)\n\(busNumber)", subtitle: "\(speed)\n\(supervisorName)")
+                        
+                        self.mapp.addAnnotation(mitAnnotation)
+                        self.mapp.setRegion(mitAnnotation.region, animated: true)
+                        self.mapp.setCenter(mitCoordinate, animated: true)
+                    }
+                    
+                }
+            }
         }
     }
-
+    
 }
 
 extension adminHomeVC: UICollectionViewDelegate, UICollectionViewDataSource ,UICollectionViewDelegateFlowLayout {
@@ -94,10 +100,10 @@ extension adminHomeVC: UICollectionViewDelegate, UICollectionViewDataSource ,UIC
                 cell.stutes.text = action
             }
             return cell
-    }else {
-    return homeCell()
+        }else {
+            return homeCell()
+        }
     }
-}
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let snap = buss[indexPath.row]
@@ -119,7 +125,7 @@ extension adminHomeVC: UICollectionViewDelegate, UICollectionViewDataSource ,UIC
             mapp.setRegion(mitAnnotation.region, animated: true)
         }
     }
-
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         return CGSize(width: 120, height: collectionView.frame.height)
@@ -127,12 +133,15 @@ extension adminHomeVC: UICollectionViewDelegate, UICollectionViewDataSource ,UIC
 }
 
 extension adminHomeVC: MKMapViewDelegate {
+    func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
+    }
+    
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         if let vendoAnnoutationView    = mapp.dequeueReusableAnnotationView(withIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier) as? MKMarkerAnnotationView {
+            vendoAnnoutationView.image = UIImage(named: "Group 14")
             vendoAnnoutationView.animatesWhenAdded = true
             vendoAnnoutationView.titleVisibility = .adaptive
             vendoAnnoutationView.titleVisibility = .adaptive
-            
             return vendoAnnoutationView
         }
         return nil
