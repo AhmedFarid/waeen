@@ -16,9 +16,12 @@ class newMessageVC: UIViewController {
     @IBOutlet weak var messageTF: UITextView!
     @IBOutlet weak var sendBtn: roundedBtn!
     
-    
+    var x :String?
     var type = ""
     var namesz = ""
+    var namess = ""
+    var titless = ""
+    var messagess = ""
     
     var singleItem: messages?
     
@@ -33,21 +36,38 @@ class newMessageVC: UIViewController {
         createtypePiker()
         textEnabeld()
         viewMasseges()
+        if helper.getAPIToken().role == "parent" {
+            self.typeTF.text = "admin"
+            self.nameTf.text = helper.getAPIToken().name ?? ""
+            self.typeTF.isEnabled = false
+            self.nameTf.isEnabled = false
+        }
     }
     
     func viewMasseges() {
+        if x == nil{
         self.typeTF.text = type
         self.nameTf.text = singleItem?.receiver
         self.titleTF.text = singleItem?.title
         self.messageTF.text = singleItem?.body
-        
-        if singleItem != nil {
+            
+            if singleItem != nil{
+                self.typeTF.isEnabled = false
+                self.nameTf.isEnabled = false
+                self.titleTF.isEnabled = false
+                self.messageTF.isEditable = false
+                self.sendBtn.isHidden = true
+            }
+        }else {
+            self.typeTF.text = type
+            self.nameTf.text = namess
+            self.titleTF.text = titless
+            self.messageTF.text = messagess
             self.typeTF.isEnabled = false
             self.nameTf.isEnabled = false
             self.titleTF.isEnabled = false
             self.messageTF.isEditable = false
             self.sendBtn.isHidden = true
-            
         }
     }
     
@@ -96,31 +116,35 @@ class newMessageVC: UIViewController {
     
     @IBAction func sendBtn(_ sender: Any) {
         
+        
+        
         guard let name = typeTF.text, !name.isEmpty else {
-            let messages = NSLocalizedString("ادخل الاسم", comment: "hhhh")
-            let title = NSLocalizedString("طلب استشاره", comment: "hhhh")
+            let messages = NSLocalizedString("enter type", comment: "hhhh")
+            let title = NSLocalizedString("message", comment: "hhhh")
             self.showAlert(title: title, message: messages)
             return
         }
         guard let phone = nameTf.text, !phone.isEmpty else {
-            let messages = NSLocalizedString("ادخل الجوال", comment: "hhhh")
-            let title = NSLocalizedString("طلب استشاره", comment: "hhhh")
+            let messages = NSLocalizedString("enter name", comment: "hhhh")
+            let title = NSLocalizedString("message", comment: "hhhh")
             self.showAlert(title: title, message: messages)
             return
         }
         guard let email = titleTF.text, !email.isEmpty else {
-            let messages = NSLocalizedString("ادخل البريد الالكتروني", comment: "hhhh")
-            let title = NSLocalizedString("طلب استشاره", comment: "hhhh")
+            let messages = NSLocalizedString("Enter Title", comment: "hhhh")
+            let title = NSLocalizedString("message", comment: "hhhh")
             self.showAlert(title: title, message: messages)
             return
         }
         guard let message = messageTF.text, !message.isEmpty else {
-            let messages = NSLocalizedString("ادخل الرساله", comment: "hhhh")
-            let title = NSLocalizedString("طلب استشاره", comment: "hhhh")
+            let messages = NSLocalizedString("enter message", comment: "hhhh")
+            let title = NSLocalizedString("message", comment: "hhhh")
             self.showAlert(title: title, message: messages)
             return
         }
         
+        
+        if helper.getAPIToken().role == "admin" {
         
                 API_Masseges.sendmassage(type: typeString ?? "", id: namesz, title: titleTF.text ?? "", body: messageTF.text ?? "" ){ (error: Error?, success, data) in
                     if success {
@@ -130,6 +154,16 @@ class newMessageVC: UIViewController {
                         print("Error")
                     }
                 }
+        }else {
+            API_Parents.sendmassage(title: titleTF.text ?? "", body: messageTF.text ?? "" ){ (error: Error?, success, data) in
+                if success {
+                    let title = NSLocalizedString("Added", comment: "profuct list lang")
+                    self.showAlert(title: title, message: data ?? "")
+                }else {
+                    print("Error")
+                }
+            }
+        }
         
     }
 }

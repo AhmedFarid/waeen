@@ -69,6 +69,7 @@ PODS:
     - nanopb/encode (= 0.3.901)
   - nanopb/decode (0.3.901)
   - nanopb/encode (0.3.901)
+  - OneSignal (2.9.5)
   - SwiftyJSON (4.2.0)
 
 DEPENDENCIES:
@@ -78,6 +79,7 @@ DEPENDENCIES:
   - Firebase/Database
   - IQKeyboardManagerSwift
   - Kingfisher
+  - OneSignal
   - SwiftyJSON
 
 SPEC REPOS:
@@ -97,6 +99,7 @@ SPEC REPOS:
     - Kingfisher
     - leveldb-library
     - nanopb
+    - OneSignal
     - SwiftyJSON
 
 SPEC CHECKSUMS:
@@ -115,8 +118,9 @@ SPEC CHECKSUMS:
   Kingfisher: fcec238063d17404fca89bf0a850583211c4cbf6
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
+  OneSignal: ccdeb961882f8668305e5b694e2cb7cb325fc907
   SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
 
-PODFILE CHECKSUM: 049156c90a1cfe01287f0f1799e963f353cc426a
+PODFILE CHECKSUM: df2273fb066721d919899d701874daf287cf9b59
 
 COCOAPODS: 1.5.2

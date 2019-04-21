@@ -23,5 +23,10 @@ struct URLs {
     static let notification = main + "notification"
     static let getAttendanceStudent = main + "getAttendanceStudent"
     static let infoSchool = main + "infoSchool"
+    static let playerIds = main + "playerIds"
+    static let studentParent = main + "studentParent"
+    static let inboxMessageParent = main + "inboxMessageParent"
+    static let sendMessageParent = main + "sendMessageParent"
+    static let messageParent = main + "messageParent"
     
 }

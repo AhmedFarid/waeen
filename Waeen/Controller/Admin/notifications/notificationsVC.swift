@@ -22,12 +22,25 @@ class notificationsVC: UIViewController {
         handleRefreshSentMasseges()
     }
     
-    @objc private func handleRefreshSentMasseges() {
+    override func viewWillAppear(_ animated: Bool) {
+        if let tabItems = self.tabBarController?.tabBar.items {
+            let tabItem = tabItems[3]
+            tabItem.badgeValue = nil
+        }
+        
+    }
+    
+    @objc  func handleRefreshSentMasseges() {
         API_Masseges.notification{ (error: Error?, notifatcitonss: [notfications]?) in
             if let notifatcitonss = notifatcitonss {
                 self.notifatcitonss = notifatcitonss
                 print("xxx\(self.notifatcitonss)")
+//                if let tabItems = self.tabBarController?.tabBar.items {
+//                    let tabItem = tabItems[3]
+//                    tabItem.badgeValue = "\(notifatcitonss.count)"
+//                }
                 self.tableView.reloadData()
+                
             }
         }
         

@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		2735B42908A47DE4362594B1 /* Pods_Waeen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF5A9FB43BE0B8810F1B8741 /* Pods_Waeen.framework */; };
+		750590E722426AA1005D46CD /* parents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750590E622426AA1005D46CD /* parents.swift */; };
+		750590EA22426F0F005D46CD /* API+Parents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750590E922426F0F005D46CD /* API+Parents.swift */; };
+		750590ED22427EB8005D46CD /* parentHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750590EC22427EB8005D46CD /* parentHomeVC.swift */; };
+		750590F022428224005D46CD /* parentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750590EF22428224005D46CD /* parentCell.swift */; };
 		75225622223A57C900B3E793 /* notifactionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75225621223A57C900B3E793 /* notifactionCell.swift */; };
 		75225625223A58D400B3E793 /* notificationsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75225624223A58D400B3E793 /* notificationsVC.swift */; };
 		75225628223A688900B3E793 /* sidemenueVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75225627223A688900B3E793 /* sidemenueVC.swift */; };
@@ -15,6 +19,10 @@
 		7522562C223A922000B3E793 /* attandenceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7522562B223A922000B3E793 /* attandenceCell.swift */; };
 		7522562E223AA9FC00B3E793 /* superVisoersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7522562D223AA9FC00B3E793 /* superVisoersCell.swift */; };
 		75225630223AAC4600B3E793 /* suporViserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7522562F223AAC4600B3E793 /* suporViserInfo.swift */; };
+		757D64B422490F2F00EE140A /* messageParentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757D64B322490F2F00EE140A /* messageParentVC.swift */; };
+		757D64B62249125400EE140A /* massgeCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757D64B52249125400EE140A /* massgeCells.swift */; };
+		757D64B922492D0F00EE140A /* superVisourescell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757D64B822492D0F00EE140A /* superVisourescell.swift */; };
+		757D64BB22492E8E00EE140A /* supervisourVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757D64BA22492E8E00EE140A /* supervisourVC.swift */; };
 		758DEFDD222FC8F80044CF2A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758DEFDC222FC8F80044CF2A /* AppDelegate.swift */; };
 		758DEFDF222FC8F80044CF2A /* loginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758DEFDE222FC8F80044CF2A /* loginVC.swift */; };
 		758DEFE2222FC8F80044CF2A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 758DEFE0222FC8F80044CF2A /* Main.storyboard */; };
@@ -43,6 +51,10 @@
 
 /* Begin PBXFileReference section */
 		56FFC46A1996A1BDA5BA2CEC /* Pods-Waeen.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Waeen.release.xcconfig"; path = "Pods/Target Support Files/Pods-Waeen/Pods-Waeen.release.xcconfig"; sourceTree = "<group>"; };
+		750590E622426AA1005D46CD /* parents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = parents.swift; sourceTree = "<group>"; };
+		750590E922426F0F005D46CD /* API+Parents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API+Parents.swift"; sourceTree = "<group>"; };
+		750590EC22427EB8005D46CD /* parentHomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = parentHomeVC.swift; sourceTree = "<group>"; };
+		750590EF22428224005D46CD /* parentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = parentCell.swift; sourceTree = "<group>"; };
 		75225621223A57C900B3E793 /* notifactionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = notifactionCell.swift; sourceTree = "<group>"; };
 		75225624223A58D400B3E793 /* notificationsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = notificationsVC.swift; sourceTree = "<group>"; };
 		75225627223A688900B3E793 /* sidemenueVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sidemenueVC.swift; sourceTree = "<group>"; };
@@ -50,6 +62,12 @@
 		7522562B223A922000B3E793 /* attandenceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = attandenceCell.swift; sourceTree = "<group>"; };
 		7522562D223AA9FC00B3E793 /* superVisoersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = superVisoersCell.swift; sourceTree = "<group>"; };
 		7522562F223AAC4600B3E793 /* suporViserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = suporViserInfo.swift; sourceTree = "<group>"; };
+		757D64B322490F2F00EE140A /* messageParentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = messageParentVC.swift; sourceTree = "<group>"; };
+		757D64B52249125400EE140A /* massgeCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = massgeCells.swift; sourceTree = "<group>"; };
+		757D64B822492D0F00EE140A /* superVisourescell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = superVisourescell.swift; sourceTree = "<group>"; };
+		757D64BA22492E8E00EE140A /* supervisourVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = supervisourVC.swift; sourceTree = "<group>"; };
+		7588B49A223FA84A003C4360 /* Waeen.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Waeen.entitlements; sourceTree = "<group>"; };
+		7588B49B223FA976003C4360 /* Waeen-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Waeen-Bridging-Header.h"; sourceTree = "<group>"; };
 		758DEFD9222FC8F80044CF2A /* Waeen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Waeen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		758DEFDC222FC8F80044CF2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		758DEFDE222FC8F80044CF2A /* loginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginVC.swift; sourceTree = "<group>"; };
@@ -92,6 +110,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		750590E522426A7E005D46CD /* parante */ = {
+			isa = PBXGroup;
+			children = (
+				750590E622426AA1005D46CD /* parents.swift */,
+			);
+			path = parante;
+			sourceTree = "<group>";
+		};
+		750590E822426EF8005D46CD /* Parents */ = {
+			isa = PBXGroup;
+			children = (
+				750590E922426F0F005D46CD /* API+Parents.swift */,
+			);
+			path = Parents;
+			sourceTree = "<group>";
+		};
+		750590EB22427227005D46CD /* parent */ = {
+			isa = PBXGroup;
+			children = (
+				757D64B722492CFA00EE140A /* menu */,
+				757D64B22248F1EC00EE140A /* feedback */,
+				757D64B12248F1C000EE140A /* home */,
+			);
+			path = parent;
+			sourceTree = "<group>";
+		};
+		750590EE224281C7005D46CD /* parents */ = {
+			isa = PBXGroup;
+			children = (
+				750590EF22428224005D46CD /* parentCell.swift */,
+				757D64B52249125400EE140A /* massgeCells.swift */,
+				757D64B822492D0F00EE140A /* superVisourescell.swift */,
+			);
+			path = parents;
+			sourceTree = "<group>";
+		};
 		75225623223A588B00B3E793 /* notifications */ = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +162,30 @@
 				7522562F223AAC4600B3E793 /* suporViserInfo.swift */,
 			);
 			path = sidemenu;
+			sourceTree = "<group>";
+		};
+		757D64B12248F1C000EE140A /* home */ = {
+			isa = PBXGroup;
+			children = (
+				750590EC22427EB8005D46CD /* parentHomeVC.swift */,
+			);
+			path = home;
+			sourceTree = "<group>";
+		};
+		757D64B22248F1EC00EE140A /* feedback */ = {
+			isa = PBXGroup;
+			children = (
+				757D64B322490F2F00EE140A /* messageParentVC.swift */,
+			);
+			path = feedback;
+			sourceTree = "<group>";
+		};
+		757D64B722492CFA00EE140A /* menu */ = {
+			isa = PBXGroup;
+			children = (
+				757D64BA22492E8E00EE140A /* supervisourVC.swift */,
+			);
+			path = menu;
 			sourceTree = "<group>";
 		};
 		758DEFD0222FC8F80044CF2A = {
@@ -131,7 +209,9 @@
 		758DEFDB222FC8F80044CF2A /* Waeen */ = {
 			isa = PBXGroup;
 			children = (
+				7588B49A223FA84A003C4360 /* Waeen.entitlements */,
 				758DEFDC222FC8F80044CF2A /* AppDelegate.swift */,
+				7588B49B223FA976003C4360 /* Waeen-Bridging-Header.h */,
 				758DF010223012020044CF2A /* GoogleService-Info.plist */,
 				758DEFE8222FC8FA0044CF2A /* Info.plist */,
 				758DEFE3222FC8FA0044CF2A /* Assets.xcassets */,
@@ -159,6 +239,7 @@
 		758DEFEF222FCBBE0044CF2A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				750590E522426A7E005D46CD /* parante */,
 				75E6AB0922391ED8004B5061 /* Admin */,
 			);
 			path = Model;
@@ -176,6 +257,7 @@
 		758DEFF1222FCBDE0044CF2A /* cellClass */ = {
 			isa = PBXGroup;
 			children = (
+				750590EE224281C7005D46CD /* parents */,
 				758DF009223006CD0044CF2A /* Admin */,
 			);
 			path = cellClass;
@@ -184,6 +266,7 @@
 		758DEFF2222FCBEA0044CF2A /* API */ = {
 			isa = PBXGroup;
 			children = (
+				750590E822426EF8005D46CD /* Parents */,
 				75E6AB0C2239219A004B5061 /* Admin */,
 				758DF005222FEFDD0044CF2A /* API+AUTH.swift */,
 			);
@@ -193,6 +276,7 @@
 		758DEFF3222FCBF90044CF2A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				750590EB22427227005D46CD /* parent */,
 				758DF00C223007960044CF2A /* Admin */,
 				758DEFF6222FCC540044CF2A /* Auth */,
 			);
@@ -344,6 +428,18 @@
 				TargetAttributes = {
 					758DEFD8222FC8F80044CF2A = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.VPNLite = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -442,27 +538,35 @@
 			files = (
 				75225628223A688900B3E793 /* sidemenueVC.swift in Sources */,
 				758DEFFA222FD0800044CF2A /* roundedBtn.swift in Sources */,
+				750590ED22427EB8005D46CD /* parentHomeVC.swift in Sources */,
 				758DEFDF222FC8F80044CF2A /* loginVC.swift in Sources */,
 				7522562C223A922000B3E793 /* attandenceCell.swift in Sources */,
+				750590E722426AA1005D46CD /* parents.swift in Sources */,
 				758DF006222FEFDD0044CF2A /* API+AUTH.swift in Sources */,
 				7522562A223A8D6E00B3E793 /* attendanceVC.swift in Sources */,
 				75E6AB06223908F3004B5061 /* feedBackVC.swift in Sources */,
 				758DF00F223007C80044CF2A /* adminHomeVC.swift in Sources */,
 				758DF008222FF2AA0044CF2A /* showAlert.swift in Sources */,
 				758DF014223019670044CF2A /* DataServices.swift in Sources */,
+				757D64B922492D0F00EE140A /* superVisourescell.swift in Sources */,
 				75E6AB0822391E2E004B5061 /* massageCell.swift in Sources */,
+				757D64B62249125400EE140A /* massgeCells.swift in Sources */,
 				75225622223A57C900B3E793 /* notifactionCell.swift in Sources */,
 				758DF002222FD9E40044CF2A /* Config.swift in Sources */,
+				750590EA22426F0F005D46CD /* API+Parents.swift in Sources */,
 				75225630223AAC4600B3E793 /* suporViserInfo.swift in Sources */,
+				750590F022428224005D46CD /* parentCell.swift in Sources */,
 				758DF004222FE24D0044CF2A /* helper.swift in Sources */,
 				75E6AB0E223921B0004B5061 /* API+Masseges.swift in Sources */,
 				75E6AB04223907B1004B5061 /* roundedView.swift in Sources */,
 				75225625223A58D400B3E793 /* notificationsVC.swift in Sources */,
+				757D64B422490F2F00EE140A /* messageParentVC.swift in Sources */,
 				7522562E223AA9FC00B3E793 /* superVisoersCell.swift in Sources */,
 				758DF00B223006EC0044CF2A /* homeCell.swift in Sources */,
 				75E6AB1122393ACD004B5061 /* newMessageVC.swift in Sources */,
 				75E6AB0B22391EF4004B5061 /* messages.swift in Sources */,
 				758DEFDD222FC8F80044CF2A /* AppDelegate.swift in Sources */,
+				757D64BB22492E8E00EE140A /* supervisourVC.swift in Sources */,
 				758DEFF8222FCF730044CF2A /* textimage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -610,15 +714,22 @@
 			baseConfigurationReference = 7A250EFA201FC002BA05152C /* Pods-Waeen.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Waeen/Waeen.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4Z34DQ34UQ;
 				INFOPLIST_FILE = Waeen/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Ebakers.Waeen;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Ebakers.Waeenese;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Waeen/Waeen-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -629,15 +740,21 @@
 			baseConfigurationReference = 56FFC46A1996A1BDA5BA2CEC /* Pods-Waeen.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Waeen/Waeen.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4Z34DQ34UQ;
 				INFOPLIST_FILE = Waeen/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Ebakers.Waeen;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Ebakers.Waeenese;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Waeen/Waeen-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

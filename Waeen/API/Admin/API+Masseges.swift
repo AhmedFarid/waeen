@@ -250,7 +250,7 @@ class API_Masseges: NSObject {
             "user_token": user_token,
             "api_token": "1234"
         ]
-        
+        print(parameters)
         Alamofire.request(url, method: .post, parameters: parameters, encoding: URLEncoding.default, headers: nil) .responseJSON  { response in
             
             
